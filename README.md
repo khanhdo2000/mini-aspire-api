@@ -3,6 +3,8 @@
 ### Requirement
 
 - Make sure to install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- PHP >= 7.2.5
+- Composer
 
 ### Installation
 
@@ -40,6 +42,10 @@
    Aspire BA: ``ba@aspireapp.com/password``
 
 You are ready to use the API
+
+### Postman collection
+
+Please refer to json collection file inside ``.postman_collection`` directory
 
 ### Test
 
