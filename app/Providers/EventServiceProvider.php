@@ -18,6 +18,22 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        LoanApplicationSubmitted::class => [
+            LoanApplicationSubmittedNotification::class,
+        ],
+        LoanApplicationApproved::class => [
+            LoanApplicationApprovedNotification::class,
+        ],
+        LoanApplicationRejected::class => [
+            LoanApplicationRejectedNotification::class,
+        ],
+        PaymentRequestCreated::class => [
+            PaymentRequestCreatedNotification::class,
+        ],
+        PaymentSucceed::class => [
+            UpdateLoanBalance::class,
+            PaymentSucceedNotification::class,
+        ],
     ];
 
     /**
