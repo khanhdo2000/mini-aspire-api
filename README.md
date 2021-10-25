@@ -15,7 +15,10 @@
     composer install
     ./vendor/bin/sail up
     ```
-2. Grab your local machine api
+2. Copy ``.env.example`` to ``.env`` 
+   
+
+3. Grab your local machine api
 
    If you are using mac or linux, open terminal and run
     ```
@@ -29,10 +32,11 @@
     ```
     DB_HOST=192.168.0.104
     ```
-3. Open another terminal and run
+4. Open another terminal and run
     ```
     php artisan migrate
     php artisan db:seed
+    php artisan jwt:secret
     ```
 
    By running Laravel seeder, these 2 users will be generated for us:
