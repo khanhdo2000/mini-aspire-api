@@ -13,12 +13,12 @@
     git clone https://github.com/khanhdo2000/mini-aspire-api.git
     cd mini-aspire-api
     composer install
-    ./vendor/bin/sail up
+    cp .env.example .env
+    php artisan key:generate
+    php artisan jwt:secret
     ```
-2. Copy ``.env.example`` to ``.env`` 
-   
 
-3. Grab your local machine api
+2. Grab your local machine api
 
    If you are using mac or linux, open terminal and run
     ```
@@ -32,11 +32,20 @@
     ```
     DB_HOST=192.168.0.104
     ```
+3. Run
+   ```
+   ./vendor/bin/sail up
+   ```
+   
+    *Note*: if you are having issue running the above command or database issue, please run this to remove all images and volumes then run ``./vendor/bin/sail up`` again
+   
+    ```
+   ./vendor/bin/sail down --rmi all -v
+   ```
 4. Open another terminal and run
     ```
     php artisan migrate
     php artisan db:seed
-    php artisan jwt:secret
     ```
 
    By running Laravel seeder, these 2 users will be generated for us:
