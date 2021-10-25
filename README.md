@@ -11,7 +11,7 @@
 1. Open terminal and run these command:
     ```
     git clone https://github.com/khanhdo2000/mini-aspire-api.git
-    cd aspire-api
+    cd mini-aspire-api
     composer install
     ./vendor/bin/sail up
     ```
