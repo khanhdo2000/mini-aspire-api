@@ -1,0 +1,81 @@
+###
+POST {{host}}/api/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password": "password"
+}
+
+###
+POST {{host}}/api/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "ba@aspireapp.com",
+    "password": "password"
+}
+
+###
+POST {{host}}/api/auth/logout
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+POST {{host}}/api/auth/refresh
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+POST {{host}}/api/auth/me
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+POST {{host}}/api/loan
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "amount": 150000,
+    "term_in_weeks": 1560,
+    "description": "I need this loan for my business"
+}
+
+###
+PUT {{host}}/api/loan/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{customerToken}}
+
+{
+    "interest_rate": 6,
+    "status": "approved"
+}
+
+###
+GET {{host}}/api/payment/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+PUT {{host}}/api/payment/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "paymentSuccess": true
+}
+
+###
+GET {{host}}/api/payment/generatePaymentRequest
+Accept: application/json
+Content-Type: application/json
